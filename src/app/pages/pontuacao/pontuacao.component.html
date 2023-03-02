@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Responsive</title>
+
+    <script src="https://kit.fontawesome.com/3a7225da88.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <form action="#" class="sign-in-form">
+                    <h2 class="signin title">Cadastrar Jogador</h2>
+
+                    <div class="input-field">
+                        <i class="fas  fa-user"></i>
+                        <input type="date" placeholder="Data da Partida" [(ngModel)]="pontuacao.data" name="data" class="form-control">
+                    </div>
+
+
+                    <div class="input-field">
+                        <i class="fas  fa-user"></i>
+                        <input type="text"  placeholder="Pontuação" [(ngModel)]="pontuacao.pontos" type="number" name="pontos" class="form-control" id="pontos" min="1" maxlength="5">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fas  fa-lock"></i>
+                        <select style="background-color: #eee;border: none;" class="form-control" [(ngModel)]="pontuacao.jogadorId" name="jogadorId"  placeholder="Jogador">
+                            <option style="" placeholder="Jogador" *ngFor="let jogador of jogadores" [ngValue]="jogador.id">{{jogador.nome}}</option>
+                        </select>
+                    </div>
+                    <input type="submit" value="Cadastrar" class="btn solid" (click)="salvar()">
+                </form>
+
+                <form action="#" class="sign-up-form">
+                    <h2 class="signup title">Sign up</h2>
+
+                    <div class="input-field">
+                        <i class="fas  fa-user"></i>
+                        <input type="text" placeholder="Username">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fas  fa-envelope"></i>
+                        <input type="text" placeholder="Email">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fas  fa-lock"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <input type="submit" value="Sign Up" class="btn solid">
+
+
+                    <p class="social-text">Or Sign Un with social platforms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>È um novo Jogador?</h3>
+                    <p>Cadastre-se no jogo.</p>
+                </div>
+                
+                <img src="../../../assets/undraw_maker_launch_crhe.svg" class="image" alt="Rock">
+            </div>
+
+
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>One of us ?</h3>
+                    <p>Lorem ipsum dolor sit amet adipisicing elit. Dolorem omnis veritatis nobis.</p>
+                    <button class="btn transparent" id="sign-in-btn">Cadastrar Jogador</button>
+                </div>
+
+                <img src="assets/img/undraw_press_play_bx2d.svg" class="image" alt="Rock">
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
